@@ -1,0 +1,180 @@
+{
+  "info": {
+    "_postman_id": "76faa397-8cfa-4bb6-bc0a-d7cbdbbca0f4",
+    "name": "PetDevShop API - Semana 2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52903548"
+  },
+  "item": [
+    {
+      "name": "1. POST /pets - Cadastrar pet",
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"Rex\",\r\n  \"especie\": \"Cachorro\",\r\n  \"tutorId\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/pets",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "6. POST /pets - ERRO 400 nome inválido",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\"R\"",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/pets",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2. GET /pets - Listar",
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/pets",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3. GET /pets/1 - Buscar por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/pets/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pets",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "7. GET /pets/abc - ERRO 400 ID inválido",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/pets/abc",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pets",
+            "abc"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4. PUT /pets/1 - Atualizar",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"Rex Junior\",\r\n  \"especie\": \"Cão\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/pets/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pets",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5. DELETE /pets/1 - Excluir",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/pets/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pets",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
