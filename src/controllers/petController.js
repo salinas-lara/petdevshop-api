@@ -33,6 +33,8 @@ async function listarPets(req, res) {
     return res.status(200).json(pets);
 
   } catch (erro) {
+        console.log(erro);   // ADICIONE ESTA LINHA
+
     return res.status(500).json({ erro: "Erro ao listar pets." });
   }
 }
