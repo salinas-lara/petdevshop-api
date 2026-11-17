@@ -28,3 +28,17 @@ API REST para gerenciar o cadastro de tutores e seus pets em um pet shop. Resolv
 - `POST /pets` - Cadastra um novo pet
 - `PUT /pets/:id` - Atualiza um pet
 - `DELETE /pets/:id` - Remove um pet
+
+
+
+
+Como Rodar:
+npm install
+
+Criar .env DATABASE_URL="file:./dev.db"
+
+npx prisma migrate dev
+
+node src/server.js
+
+Em outro terminal: npx prisma studio
