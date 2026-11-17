@@ -44,7 +44,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "\"R\"",
+          "raw": "{\n  \"nome\": \"R\",\n  \"especie\": \"Cão\",\n  \"tutorId\": 1\n}",
           "options": {
             "raw": {
               "language": "json"
